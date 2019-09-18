@@ -7,17 +7,21 @@
 	</head>
 
 	<body>
-		<form action="javascript:decryptText($('.text_to_decrypt').val())">
+		<div class="container">
+			<h1>Decrypt permutation</h1>
 
-			<textarea class="text_to_decrypt">Ipsum Lorem</textarea>
+			<textarea class="text_to_decrypt">Sample text, press "Encrypt" to apply the selected transofrmation, decryption will return all the permutated texts with a matching score</textarea>
 
-			<input type="text" class="transPattern" value="1234">
-			<input type="button" value="Encrypt" onclick="applyTransposationOnText()">
+			<div class="encrypt_controls">
+				<input type="text" class="transPattern" value="4321">
+				<button onClick="applyTransposationOnText()">Encrypt</button>
+			</div>
 
-			<input type="submit" value="Send for decryption">
-		</form>
+			<!-- <input type="submit" value="Send for decryption"> -->
+			<button class="send" onClick="decryptText($('.text_to_decrypt').val())">Send for decryption</button>
 
-		<div class="text_results">
+			<div class="text_results">
+			</div>
 		</div>
 	
 		<!-- Scripts -->

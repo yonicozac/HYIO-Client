@@ -19,6 +19,7 @@ function decryptText(inputText) {
 					.attr('score', data.score)
 					.append($('<span></span>')
 						.text(data.score)
+						.addClass('score')
 					)
 					.append($('<span></span>')
 						.text(data.text)
