@@ -7,14 +7,13 @@
 	</head>
 
 	<body>
-		<form action="javascript:decryptText()">
-			<textarea>Ipsum Lorem</textarea>
-			<input type="button" value="Encrypt">
-			<div class="encrypt_dialog">
-				<label>Enter transposition pattern</label>
-				<input type="text" value="123456">
-				<input type="button" value="OK" onclick="transposeText()">
-			</div>
+		<form action="javascript:decryptText($('.text_to_decrypt').val())">
+
+			<textarea class="text_to_decrypt">Ipsum Lorem</textarea>
+
+			<input type="text" class="transPattern" value="1234">
+			<input type="button" value="Encrypt" onclick="applyTransposationOnText()">
+
 			<input type="submit" value="Send for decryption">
 		</form>
 
@@ -24,9 +23,5 @@
 		<!-- Scripts -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 		<script src="javascript.js" type="text/javascript"></script>
-		<script type="text/javascript">
-			$( document ).ready(function() {
-			});
-		</script>
 	</body>
 </html>
