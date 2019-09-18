@@ -1,0 +1,9 @@
+input[type=submit] {
+	display: block;
+}
+button {
+
+}
+.encrypt_dialog {
+	display: none;
+}
